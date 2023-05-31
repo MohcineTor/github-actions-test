@@ -7,9 +7,10 @@ env:
 jobs:
   windows_job:
     runs-on: windows-latest
-    env:
-          mascot: Octocat
+    
     steps:
+      - env:
+            mascot: Octocat
       - run: echo 'Hi ${{ env.mascot }}'  # Hi Mona
       - run: echo 'Hi ${{ env.mascot }}'  # Hi Octocat
         
