@@ -4,15 +4,16 @@ env:
   mascot: TOR
   super_duper_var: totally_awesome
 
+
 jobs:
   windows_job:
     runs-on: windows-latest
     
     steps:
-      - env:
-            mascot: Octocat
       - run: echo 'Hi ${{ env.mascot }}'  # Hi Mona
       - run: echo 'Hi ${{ env.mascot }}'  # Hi Octocat
+        env:
+           mascot: Octocat
         
   linux_job:
     runs-on: ubuntu-latest
